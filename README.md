@@ -9,7 +9,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 
-[Live Demo](https://simpsons-app.vercel.app) · [Report Bug](https://github.com/JuaniVeltri/simpsons-app/issues) · [Request Feature](https://github.com/JuaniVeltri/simpsons-app/issues)
+[Live Demo](https://simpsons.jveltri.com.ar/) · [Report Bug](https://github.com/JuaniVeltri/simpsons-app/issues) · [Request Feature](https://github.com/JuaniVeltri/simpsons-app/issues)
 
 </div>
 
@@ -120,6 +120,9 @@ Built with cutting-edge web technologies including **Next.js 16**, **React 19**,
 - Dialog, Tabs, Select, Tooltip, Scroll Area, and more
 - Fully accessible, unstyled components
 
+### Analytics & Monitoring
+- **[Vercel Analytics](https://vercel.com/analytics)** - Real-time web analytics and performance insights
+
 ### Development Tools
 - **ESLint** - Code linting and quality checks
 - **PostCSS** - CSS transformations
@@ -153,7 +156,22 @@ yarn install
 pnpm install
 ```
 
-3. **Run the development server**
+3. **Environment Configuration (Optional)**
+
+The application works out of the box with default settings. However, you can customize the configuration by creating a `.env.local` file based on `.env.example`:
+
+```bash
+cp .env.example .env.local
+```
+
+Available environment variables:
+- `NEXT_PUBLIC_API_BASE_URL` - The Simpsons API base URL (default: https://thesimpsonsapi.com/api)
+- `NEXT_PUBLIC_CDN_BASE_URL` - CDN URL for images (default: https://cdn.thesimpsonsapi.com)
+- `NEXT_PUBLIC_ITEMS_PER_PAGE` - Items per page for pagination (default: 20)
+
+**Analytics**: Vercel Analytics is automatically enabled when deployed on Vercel. No additional configuration is needed.
+
+4. **Run the development server**
 
 ```bash
 npm run dev

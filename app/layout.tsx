@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Bangers } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { QueryProvider } from "@/providers/query-provider";
 import { DashboardHeader } from "@/components/dashboard/header";
@@ -54,6 +55,7 @@ export default function RootLayout({
             {children}
           </div>
         </QueryProvider>
+        <Analytics />
       </body>
     </html>
   );
